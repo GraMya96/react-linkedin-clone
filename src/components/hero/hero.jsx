@@ -36,9 +36,6 @@ const HeroSection = styled( Section )`
             width: 100%;
             line-height: 2;
         }
-        @media only screen and (max-width: 500px) {
-            font-size: 1.45rem;
-        }
     }
     & img {
         position: absolute;
