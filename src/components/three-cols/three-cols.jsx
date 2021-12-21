@@ -89,11 +89,12 @@ const ThreeColsContent = styled(Content)`
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 60px;
         }
-        @media only screen and (max-width: 520px) {
+        @media only screen and (max-width: 595px) {
             flex-direction: column;
             align-items: center;
-            padding-bottom: 40px;
+            padding-bottom: 100px;
         }
 
         & > div {

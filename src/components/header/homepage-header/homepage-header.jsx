@@ -221,6 +221,7 @@ const HomeHeaderContent = styled.div`
 
             @media only screen and (max-width: 915px) {
                 align-items: flex-end;
+                border-top: 1.5px solid rgba(0,0,0,.6);
             }
             @media only screen and (max-width: 600px) {
                 flex-wrap: wrap;

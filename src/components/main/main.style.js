@@ -89,9 +89,6 @@ export const SharedActor = styled.div`
     align-items: center;
 
     a {
-        /* margin-right: 12px;
-        flex-grow: 1;
-        overflow: hidden; */
         display: flex;
 
         img {
@@ -248,6 +245,10 @@ export const ModalContent = styled.div`
         width: 40rem;
         left: calc(50% - 20rem);
     }
+    @media (max-width: 991px) {
+        top: 13vh;
+        max-height: 60vh;
+    }
 
     & > h2 {
         line-height: 1.5;
@@ -256,6 +257,10 @@ export const ModalContent = styled.div`
         font-weight: 400;
         color: rgba(0,0,0,.6);
         border-bottom: 1px solid rgba(0,0,0,.15);
+
+        @media only screen and (max-width: 991px) {
+            font-size: 1.1rem;
+        }
     }
     & > .user-info {
         display:flex;
@@ -272,6 +277,10 @@ export const ModalContent = styled.div`
             font-size: 1.05rem;
             line-height: 1.5;
             margin-left: 10px;
+
+            @media only screen and (max-width: 991px) {
+                font-size: .95rem;
+            }
         }
     }
 
@@ -285,6 +294,10 @@ export const ModalContent = styled.div`
             font-size: 1rem;
             font-weight: 600;
             padding: .7rem;
+
+            @media only screen and (max-width: 991px) {
+                max-height: 30vh;
+            }
         }
 
         & > .upload {
