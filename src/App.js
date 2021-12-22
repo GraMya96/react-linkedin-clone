@@ -1,13 +1,15 @@
 import './App.css';
-import LoginPage from './pages/login-page';
-
 import { useRoutes, Navigate } from 'react-router-dom'; //react-router-dom v6
-import HomePage from './pages/home-page';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUser } from './redux/user/user.actions';
 import { createUserProfileDocumentInFirebase } from './redux/user/user.utils';
 import { auth } from './firebase/firebase.config';
+import ErrorBoundary from './components/error-boundary/error-boundary';
+
+/* Lazy Loaded Pages */
+const HomePage = lazy(() => import( './pages/home-page' ));
+const LoginPage = lazy(() => import( './pages/login-page' ));
 
 function App() {
 
@@ -45,7 +47,13 @@ function App() {
 		}
 	]);
 
-	return routes;
+	return (
+		<ErrorBoundary>
+			<Suspense fallback={ <div></div> }>
+				{ routes }
+			</Suspense>
+		</ErrorBoundary>
+	)
 
 }
 
